@@ -1,0 +1,52 @@
+GET http://localhost:3000/todos/
+
+###
+
+GET http://localhost:3000/todos/2/
+
+###
+
+GET http://localhost:3000/agenda/?date=2021-04-04
+
+###
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 6,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-02-22"
+}
+
+###
+
+DELETE http://localhost:3000/todos/6/
+
+###
+PUT http://localhost:3000/todos/2/
+Content-Type: application/json
+
+{
+  "category": "LEARNING"
+}
+
+
+//1|Learn Node JS|HIGH|IN PROGRESS|LEARNING|2021-04-04
+//2|Buy a Car|MEDIUM|TO DO|HOME|2020-09-22
+//3|Clean the garden|LOW|TO DO|HOME|2021-02-22
+//4|Fix the bug|MEDIUM|DONE|WORK|2021-01-12
+//5|Submit the report|LOW|TO DO|WORK|2021-04-02
+
+//const condition =
+  //  priority === "LOW" ||
+ //   priority === "HIGH" ||
+ //   priority === "MEDIUM" ||
+  //  status === "TO%20DO" ||
+  //  status === "IN%20PROGRESS" ||
+   // status === "DONE" ||
+  //  category === "WORK" ||
+  //  category === "LEARNING" ||
+  //  category === "HOME";
